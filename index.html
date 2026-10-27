@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CobraZap — mensagem de cobrança pronta pro WhatsApp</title>
+<meta name="description" content="Cobre cliente atrasado sem constrangimento. Gere em segundos uma mensagem de cobrança educada e eficaz para o WhatsApp. Grátis, sem cadastro.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://cobrazapp.netlify.app/">
+<meta property="og:title" content="CobraZap — cobre sem constrangimento">
+<meta property="og:description" content="Mensagens de cobrança prontas pro WhatsApp, no tom certo. Grátis e sem cadastro.">
+<meta property="og:image" content="https://cobrazapp.netlify.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%AC%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f8f5;--card:#fff;--tx:#14201a;--mut:#58695f;--br:#e1e7e0;--ac:#0f7a4d;--ac2:#e6f5ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1411;--card:#17201a;--tx:#eef3ef;--mut:#9aa89f;--br:#27322b;--ac:#3ddc97;--ac2:#15281e}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+.w{max-width:980px;margin:0 auto;padding:0 18px}
+.hero{background:linear-gradient(135deg,#0b6b43 0%,#0f9a62 100%);color:#fff;padding:26px 0 54px;border-radius:0 0 28px 28px}
+.logo{font-weight:800;font-size:19px;letter-spacing:-.01em}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:5px 14px;font-size:13px;font-weight:600;margin-top:34px}
+h1{font-size:clamp(32px,7vw,56px);line-height:1.05;margin:14px 0 14px;letter-spacing:-.03em}
+h1 em{font-style:normal;background:#ffd84d;color:#14201a;padding:0 .18em;border-radius:8px}
+.lead{font-size:clamp(17px,2.6vw,20px);max-width:620px;opacity:.95;margin:0 0 24px}
+.cta{display:inline-block;background:#ffd84d;color:#14201a;font-weight:800;font-size:17px;padding:15px 26px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.trust{margin-top:16px;font-size:14px;opacity:.9}
+h2{font-size:24px;margin:0 0 14px;letter-spacing:-.01em}
+section{margin-top:44px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:-34px}
+@media(max-width:760px){.grid,.pro,.steps{grid-template-columns:1fr!important}}
+.card{background:var(--card);border:1px solid var(--br);border-radius:16px;padding:20px;box-shadow:0 6px 24px rgba(15,60,40,.07)}
+label{display:block;font-size:13px;color:var(--mut);margin:10px 0 4px;font-weight:600}
+input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid var(--br);background:var(--bg);color:var(--tx);font-size:16px}
+input:focus,select:focus{outline:2px solid var(--ac);border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#out{white-space:pre-wrap;background:var(--ac2);border-radius:12px;padding:15px;min-height:200px;font-size:15px;border:1px dashed var(--ac)}
+.btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+button,a.b{background:var(--ac);color:#fff;border:0;border-radius:10px;padding:12px 17px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) button,:root:not([data-theme="light"]) a.b{color:#06130c}}
+button.s{background:transparent;color:var(--tx);border:1px solid var(--br)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.n{width:34px;height:34px;border-radius:50%;background:var(--ac2);color:var(--ac);display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:8px}
+.steps p{margin:4px 0 0;color:var(--mut);font-size:15px}
+.pro{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tag{display:inline-block;background:var(--ac2);color:var(--ac);border-radius:99px;padding:3px 11px;font-size:12px;font-weight:800}
+.price{font-size:36px;font-weight:800;margin:6px 0}
+.price small{font-size:14px;color:var(--mut);font-weight:500}
+ul{padding-left:20px;margin:8px 0;color:var(--mut)}
+li{margin:5px 0}
+.hl{border:2px solid var(--ac);position:relative}
+details{background:var(--card);border:1px solid var(--br);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{color:var(--mut);margin:8px 0 0}
+footer{text-align:center;color:var(--mut);font-size:14px;margin:44px 0 24px}
+footer a{color:var(--ac);font-weight:700}
+</style>
+</head>
+<body>
+<header class="hero"><div class="w">
+<div class="logo">💬 CobraZap</div>
+<span class="badge">✓ Grátis · sem cadastro · funciona no celular</span>
+<h1>Cobre quem está devendo <em>sem perder o cliente.</em></h1>
+<p class="lead">Mensagem de cobrança pronta para o WhatsApp, no tom certo para cada atraso. Feito para MEI, freelancer e pequeno negócio.</p>
+<a class="cta" href="#ferramenta">Montar minha cobrança agora →</a>
+<div class="trust">Leva menos de 20 segundos.</div>
+</div></header>
+
+<main class="w">
+<div class="grid" id="ferramenta">
+<div class="card">
+<h2>1. Preencha</h2>
+<label>Nome do cliente</label><input id="cli" placeholder="Ex.: Marina" value="Marina">
+<div class="row">
+<div><label>Valor (R$)</label><input id="val" inputmode="decimal" placeholder="350,00" value="350,00"></div>
+<div><label>Dias de atraso</label><input id="dias" type="number" min="0" value="5"></div>
+</div>
+<label>Referente a</label><input id="ref" placeholder="Ex.: serviço de design de março" value="serviço de março">
+<label>Chave PIX (opcional)</label><input id="pix" placeholder="CPF, e-mail, telefone ou aleatória">
+<div class="row">
+<div><label>Seu nome / empresa</label><input id="eu" placeholder="Ex.: Ana Studio"></div>
+<div><label>Tom</label>
+<select id="tom"><option value="auto">Automático (pelo atraso)</option><option value="amigavel">Amigável</option><option value="firme">Firme</option><option value="final">Último aviso</option></select></div>
+</div>
+</div>
+<div class="card">
+<h2>2. Envie</h2>
+<div id="out"></div>
+<div class="btns">
+<button id="cp">Copiar</button>
+<a class="b" id="wa" href="#" target="_blank" rel="noopener">Abrir no WhatsApp</a>
+<button class="s" id="alt">Outra versão</button>
+</div>
+</div>
+</div>
+
+<section>
+<h2>Como funciona</h2>
+<div class="steps">
+<div class="card"><div class="n">1</div><b>Preencha os dados</b><p>Nome, valor e há quantos dias venceu.</p></div>
+<div class="card"><div class="n">2</div><b>Escolha o tom</b><p>Amigável, firme ou último aviso. Ou deixe no automático.</p></div>
+<div class="card"><div class="n">3</div><b>Envie no WhatsApp</b><p>Um toque e a mensagem já vai pronta, com a sua chave PIX.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Planos</h2>
+<div class="pro">
+<div class="card">
+<span class="tag">GRÁTIS</span>
+<div class="price">R$ 0</div>
+<ul><li>Mensagens ilimitadas em 3 tons</li><li>Copiar e abrir no WhatsApp</li><li>Sem cadastro</li></ul>
+</div>
+<div class="card hl">
+<span class="tag">PRO · EM BREVE</span>
+<div class="price">R$ 19 <small>/mês</small></div>
+<ul><li>Lista de clientes e cobranças em aberto</li><li>Lembretes automáticos de quem está atrasado</li><li>Mensagens personalizadas por IA com o seu jeito de falar</li></ul>
+<div class="btns"><a class="b" id="lista" href="https://wa.me/5519992529770?text=Quero%20o%20Pro%20do%20CobraZap" target="_blank" rel="noopener">Quero entrar na lista do Pro</a></div>
+<p style="font-size:13px;color:var(--mut);margin:10px 0 0">Os primeiros a entrar na lista ganham preço de fundador.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Dúvidas</h2>
+<details><summary>É grátis mesmo?</summary><p>Sim. Gerar mensagens é grátis e sem limite. O plano Pro, com lembretes automáticos, ainda está em preparação.</p></details>
+<details><summary>Meus dados ficam salvos?</summary><p>Não. O que você digita fica só no seu aparelho e não é enviado nem guardado por nós.</p></details>
+<details><summary>Posso usar para qualquer cobrança?</summary><p>O CobraZap foi feito para cobrança amigável entre quem presta um serviço e o cliente. Ele não substitui orientação jurídica em casos de dívida maior ou disputa.</p></details>
+</section>
+
+<footer>Feito no Brasil 🇧🇷 · Dúvida ou sugestão? <a href="https://wa.me/5519992529770?text=Oi!%20Tenho%20uma%20sugest%C3%A3o%20pro%20CobraZap" target="_blank" rel="noopener">Fale no WhatsApp</a></footer>
+</main>
+
+<script>
+// Contador de visitas (GoatCounter, grátis): crie a conta em goatcounter.com e coloque aqui o código escolhido.
+var GC='';
+if(GC){var s=document.createElement('script');s.async=true;s.src='https://gc.zgo.at/count.js';s.setAttribute('data-goatcounter','https://'+GC+'.goatcounter.com/count');document.head.appendChild(s)}
+function ev(n){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:n,title:n,event:true})}catch(e){}}
+
+var v=0;
+function $(i){return document.getElementById(i)}
+function brl(s){var n=parseFloat(String(s).replace(/\./g,'').replace(',','.'));return isNaN(n)?'':n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function gerar(){
+  var c=$('cli').value.trim()||'tudo bem',d=parseInt($('dias').value)||0,t=$('tom').value,r=$('ref').value.trim(),p=$('pix').value.trim(),e=$('eu').value.trim();
+  var val=brl($('val').value);
+  if(t==='auto')t=d<=7?'amigavel':(d<=20?'firme':'final');
+  var oi=$('cli').value.trim()?'Oi, '+c+'!':'Oi!';
+  var ref=r?' referente a '+r:'';
+  var valor=val?' de '+val:'';
+  var atraso=d>0?' (venceu há '+d+' '+(d===1?'dia':'dias')+')':'';
+  var pix=p?'\n\nChave PIX: '+p:'';
+  var ass=e?'\n\n'+e:'';
+  var M={
+    amigavel:[
+      oi+' Tudo bem? 😊\n\nPassando só para lembrar do pagamento'+valor+ref+atraso+'. Às vezes passa mesmo, acontece com todo mundo!'+pix+'\n\nSe já pagou, pode ignorar e me mandar o comprovante. Obrigado(a)!'+ass,
+      oi+' Tudo certo por aí?\n\nEstou organizando minhas contas e vi que o pagamento'+valor+ref+' ainda está em aberto'+atraso+'. Consegue me confirmar quando vai poder pagar?'+pix+'\n\nValeu pela parceria!'+ass
+    ],
+    firme:[
+      oi+'\n\nO pagamento'+valor+ref+' continua em aberto'+atraso+'. Preciso regularizar isso, pode me confirmar hoje quando será feito?'+pix+'\n\nSe houver algum problema, me avise para combinarmos uma solução.'+ass,
+      oi+'\n\nEntrando em contato novamente sobre o pagamento'+valor+ref+atraso+'. Peço que realize o pagamento até amanhã ou me informe uma data certa.'+pix+'\n\nFico no aguardo.'+ass
+    ],
+    final:[
+      oi+'\n\nEsta é minha última tentativa de contato amigável sobre o pagamento'+valor+ref+atraso+'. Caso não haja retorno até 48 horas, serei obrigado(a) a tomar as medidas de cobrança cabíveis.'+pix+'\n\nPrefiro resolver de forma tranquila, então aguardo seu retorno.'+ass,
+      oi+'\n\nO débito'+valor+ref+' segue pendente'+atraso+' e ainda não tive retorno. Preciso da regularização em até 48 horas para evitar encaminhar a cobrança por outros meios.'+pix+ass
+    ]};
+  var txt=M[t][v%2];
+  $('out').textContent=txt;
+  $('wa').href='https://wa.me/?text='+encodeURIComponent(txt);
+}
+['cli','val','dias','ref','pix','eu','tom'].forEach(function(i){$(i).addEventListener('input',gerar);$(i).addEventListener('change',gerar)});
+$('alt').addEventListener('click',function(){v++;gerar();ev('outra-versao')});
+$('cp').addEventListener('click',function(){
+  var t=$('out').textContent,b=$('cp');ev('copiar');
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copiado ✓';setTimeout(function(){b.textContent='Copiar'},1500)})}
+  catch(x){var r=document.createRange();r.selectNode($('out'));getSelection().removeAllRanges();getSelection().addRange(r);b.textContent='Selecionado — copie'}
+});
+$('wa').addEventListener('click',function(){ev('abrir-whatsapp')});
+$('lista').addEventListener('click',function(){ev('clique-pro')});
+gerar();
+</script>
+</body>
+</html>
